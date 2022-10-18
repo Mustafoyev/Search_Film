@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Search Films</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="wrapper">
+				<h1 class="title">Films</h1>
+				<div class="wrapper-left">
+					<select class="js-select">
+						<option value="" disabled selected>Sort by type</option>
+						<option value="movie">movie</option>
+						<option value="series">series</option>
+						<option value="episode">episode</option>
+					</select>
+
+					<form class="js-form" method="post">
+						<input
+							class="js-input inp"
+							type="text"
+							name="user_search_film"
+							aria-label="Enter your film"
+							placeholder="Enter your film"
+						/>
+						<button type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+
+			<img class="loading-img" src="./images/loading.svg" alt="Loading image" />
+			<ul class="js-list list"></ul>
+			<ol class="pagination"></ol>
+
+			<template class="template">
+				<li class="item">
+					<h3 class="item-title"></h3>
+					<img
+						class="item-img"
+						src=""
+						alt="Film image"
+						width="300"
+						height="443"
+					/>
+					<span class="item-year"></span>
+					<span class="item-id"></span>
+					<span class="item-type"></span>
+				</li>
+			</template>
+		</div>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
