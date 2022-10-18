@@ -71,6 +71,12 @@ button {
 	box-shadow: rgb(255, 255, 255) 0px 0px 40px 0px;
 }
 
+.item:hover {
+	opacity: 0.8;
+	box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px 0px;
+	cursor: pointer;
+}
+
 .item-title {
 	margin: 0;
 	padding: 8px 0;
