@@ -57,7 +57,7 @@ elForm.addEventListener('submit', function (evt) {
 	elSel.value = '';
 	inpVal = elInp.value;
 
-	getElement(`http://www.omdbapi.com/?apikey=f6ef9e38&s=${elInp.value}`);
+	getElement(`https://www.omdbapi.com/?apikey=f6ef9e38&s=${elInp.value}`);
 	elList.innerHTML = '';
 	elPages.innerHTML = '';
 	elPages.style.display = 'none';
@@ -67,7 +67,7 @@ elForm.addEventListener('submit', function (evt) {
 
 elSel.addEventListener('change', function () {
 	getElement(
-		`http://www.omdbapi.com/?apikey=f6ef9e38&s=${inpVal}&type=${elSel.value}`,
+		`https://www.omdbapi.com/?apikey=f6ef9e38&s=${inpVal}&type=${elSel.value}`,
 	);
 	elList.innerHTML = '';
 	elPages.innerHTML = '';
@@ -80,7 +80,7 @@ elPages.addEventListener('click', function (evt) {
 		let currentPage = evt.target.id;
 
 		getElement(
-			`http://www.omdbapi.com/?apikey=f6ef9e38&s=${inpVal}&page=${currentPage}`,
+			`https://www.omdbapi.com/?apikey=f6ef9e38&s=${inpVal}&page=${currentPage}`,
 		);
 
 		elList.innerHTML = '';
