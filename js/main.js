@@ -5,6 +5,7 @@ let elList = document.querySelector('.js-list');
 let elFragment = document.createDocumentFragment();
 let template = document.querySelector('.template').content;
 let loadImg = document.querySelector('.loading-img');
+let Dark = document.querySelector('.dark-mode');
 let inpVal = '';
 let pages = 0;
 let elPages = document.querySelector('.pagination');
@@ -88,3 +89,21 @@ elPages.addEventListener('click', function (evt) {
 		loadImg.style.display = 'block';
 	}
 });
+
+let theme = false;
+
+Dark.addEventListener('click', function () {
+	theme = !theme;
+	window.localStorage.setItem('theme', theme ? 'light' : 'dark');
+	darkMode();
+});
+
+function darkMode() {
+	if (window.localStorage.getItem('theme') == 'light') {
+		document.body.classList.add('light');
+	} else {
+		document.body.classList.remove('light');
+	}
+}
+
+darkMode();

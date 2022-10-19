@@ -5,6 +5,10 @@ body {
 	background-color: #333;
 }
 
+.light {
+	background-color: #fff;
+}
+
 .container {
 	width: 100%;
 	max-width: 1240px;
@@ -28,6 +32,9 @@ body {
 	font-weight: 900;
 	color: #fff;
 }
+.light > div > div > .title {
+	color: #000;
+}
 
 form {
 	margin-right: 30px;
@@ -50,11 +57,22 @@ button {
 	border-radius: 6px;
 }
 
+.light > div > div > .dark-mode {
+	background-color: #000;
+	color: #fff;
+}
+
+.dark-mode {
+	cursor: pointer;
+	padding: 8px;
+}
+
 .list {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	margin-top: 60px;
 	gap: 10px;
 	list-style-type: none;
 }
@@ -64,11 +82,20 @@ button {
 	margin: auto auto;
 }
 
+.light > div > .loading-img {
+	display: none;
+}
+
 .item {
 	border: 1px solid #fff;
 	border-radius: 12px;
 	width: 300px;
 	box-shadow: rgb(255, 255, 255) 0px 0px 40px 0px;
+}
+
+.light > div > ul > li {
+	background-color: #333;
+	box-shadow: rgb(0, 0, 0) 0px 0px 40px 0px;
 }
 
 .item:hover {
